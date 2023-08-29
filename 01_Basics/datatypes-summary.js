@@ -65,3 +65,28 @@ const myFunction = function(){
 console.log(typeof(myFunction))   // returns the function called as object function
 
 console.log(typeof data);
+
+// ====================================    The stack and Heap memory  ==========================
+
+// primitive type (stack) , non primitive type (heap)
+
+let ytName = "Pravin Mhaske";
+
+let anotherYtName = "Learn with pravin";
+
+console.log(ytName);
+console.log(anotherYtName);
+
+// Let's check for the objects 
+
+const userOne = {
+    email:"Pravin@google.com",
+    upi :"pravin@ybl"
+}
+
+const userTwo = userOne;
+
+userTwo.email = "test@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
