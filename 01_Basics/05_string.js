@@ -65,3 +65,6 @@ console.log(url.replaceAll(".","-"));
 
 console.log(url.includes('z'));
 
+console.log(gameName.split('-'));
+
+
