@@ -81,6 +81,39 @@ console.log(Object.entries(tinderUser));
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 
+const course = {
+    courseName : "Js hindi",
+    price :999,
+    courseInstructor:"Hitesh"
+}
+
+// console.log(course.courseInstructor);
+
+// The syntatic sugar format 
+
+const {courseName, price, courseInstructor:instructor} = course;
+
+console.log(courseName);
+console.log(price);
+// console.log(courseInstructor);
+console.log(instructor)
 
 
+// Concept of react  ---> Object destructure
+const navbar = ({companyName})=>{
 
+}
+
+// const navbar = (props.companyName)=>{
+
+// }
+
+navbar(companyName = "Pravin")
+
+// JSON Data 
+
+// {
+//     "name":"Hitesh",
+//     "courseName":"Js in Hindi",
+//     "price":"Free"
+// }
