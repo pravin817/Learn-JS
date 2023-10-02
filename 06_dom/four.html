@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Aur Chai | DOM</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <div >
+        <ul class="langauge">
+            <li>JavaScript</li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    function addLanguage(lang){
+        const li = document.createElement('li');
+
+        li.innerHTML = lang;
+
+        document.querySelector(".langauge").appendChild(li);
+    }
+
+    addLanguage("Python")
+    addLanguage("Typescript")
+    addLanguage("CPP")
+
+    // optimised apporach 
+    function addOptiLanguage(lang){
+        const li = document.createElement('li');
+
+        li.appendChild(document.createTextNode(lang));
+
+        document.querySelector('.langauge').appendChild(li);
+    }
+
+    addOptiLanguage("GoLang")
+
+    // Edit
+    const SecondLang = document.querySelector('li:nth-child(2)');
+
+    // Not optimised
+    // SecondLang.innerHTML = "Mojo"
+
+    const newLi = document.createElement('li');
+
+    newLi.textContent = "Mojo";
+
+    SecondLang.replaceWith(newLi);
+
+    // Replace the javaScript with the typescript
+
+    const firstLang = document.querySelector('li:first-child');
+
+    // create the new li
+
+    firstLang.outerHTML = "<li>TypeScript </li>"
+
+    // remove from the list
+
+    // get the element that you want to remove
+    const lastLang = document.querySelector('li:last-child');
+
+    lastLang.remove();
+
+
+</script>
+</html>
