@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM code aur chai</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+
+    <script>
+        // Target no : 1 ---> select the parent and know what it contain
+        const parent= document.querySelector('.parent');
+        // console.log(parent);
+
+        // console.log(parent.children)
+        // console.log(parent.children[1].innerHTML)
+
+        // Target 2 : Print the data from the parent
+        // for (let i = 0; i < parent.children.length; i++) {
+        //     console.log(parent.children[i].innerHTML)
+        // }
+
+        // Target 3 : Add the color to the Tuesday
+        // parent.children[1].style.color="orange"
+
+        // Target 4 : Print the first child of the parent
+        // console.log(parent.firstElementChild);
+
+        // Target 5 : Access the last child of the parent
+        // console.log(parent.lastElementChild);
+
+        const day1 = document.querySelector('.day');
+
+        console.log(day1);
+
+        // Target : 6 --> Get the parent of the day1
+        console.log(day1.parentElement);
+
+
+        // we can get the next element
+        console.log(day1.nextElementSibling);
+
+        // print the number of the nodes parent have
+        console.log("Nodes : ",parent.childNodes)
+    </script>
+</body>
+</html>
