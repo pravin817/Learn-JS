@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+    const sayHello = function(){
+        console.log("Hello Pravin");
+    }
+
+    setTimeout(sayHello,2000);
+
+    // Target -- 1) Change the content inside the h1 to Best Js series after two seconds.
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Best JS Series";
+    };
+
+    const changeMe = setTimeout(changeText,2000);
+    
+    // we want to stop the excution of the setTimeout when we click on stop 
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe);
+        console.log("The timeout is cleared from the queue.")
+    })
+
+    // document.getElementById('stop').addEventListener('click',function(){
+    //     const myWindow = window.open("", "", "width=1000, height=100");
+
+    //     // now close the window 
+    //     setTimeout(function(){
+    //         myWindow.close();
+    //     },2000);
+
+    // },false)
+</script>
+</html>
