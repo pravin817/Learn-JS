@@ -66,12 +66,12 @@
     */
 
     // It provides less features.
-    //    document.getElementById('owl').onclick = ()=>{
-    //     alert('owl click')
-    //    }
+    //  document.getElementById('owl').onclick = ()=>{
+    //   alert('owl click again')
+    //  }
 
     // attachEvent()
-    // jQuery --
+    // jQuery - on
 
     // type, timestamp, defaultPrevent,
     // target, toElement, Source Element, currentTarget
@@ -79,10 +79,10 @@
     // clientX, clientY, screenX,screenY
     // altkey, ctrlKey, shiftKey, keycode
 
-    // document.getElementById("owl").addEventListener("click", function (e) {
-    // //   alert("owl clicked again");
-    // console.log(e);
-    // },false);
+    document.getElementById("owl").addEventListener("click", function (e) {
+    //   alert("owl clicked again");
+    console.log(e);
+    },false);
 
     // document.getElementById("images").addEventListener("click", function (e) {
     // console.log("clicked inside the images");
@@ -137,19 +137,19 @@
 
     //Target to remove the image when clicked on the image
 
-    document.querySelector("#images").addEventListener(
-      "click",
-      function (e) {
-        console.log(e.target.tagName);
+    // document.querySelector("#images").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log(e.target.tagName);
 
-        if (e.target.tagName === "IMG") {
-            console.log(e.target.id);
-          let removeIt = e.target.parentNode;
-          removeIt.remove();
-        }
-        // removeIt.parentNode.removeChild(removeIt);
-      },
-      false
-    );
+    //     if (e.target.tagName === "IMG") {
+    //         console.log(e.target.id);
+    //       let removeIt = e.target.parentNode;
+    //       removeIt.remove();
+    //     }
+    //     // removeIt.parentNode.removeChild(removeIt);
+    //   },
+    //   false
+    // );
   </script>
 </html>
